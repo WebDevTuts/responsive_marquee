@@ -147,7 +147,7 @@ function marqueeSinglePanel() {
 
 // Debugger
 var debugTimer = setInterval(setDebugger, 100)
-
+/*
 function setDebugger() {
 
   $('.var1').html('screenSize = '+marqueeVars.screenSize);
@@ -161,3 +161,4 @@ function setDebugger() {
   $('.var9').html('inTransition = '+marqueeVars.inTransition);
 
 }
+*/
