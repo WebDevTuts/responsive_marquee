@@ -13,3 +13,5 @@ Topics include:
 - Styling the marquee with CSS
 - Setting up the timer and interactions with JavaScript
 - Using media queries for more precise responsiveness
+
+Have a look of demo site on [gh-pages](http://edwinchen85.github.io/responsive_marquee).
