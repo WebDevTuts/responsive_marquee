@@ -46,6 +46,12 @@ function marqueeAdvance() {
 
   marqueeVars.screenSize = newSize;
 
+  if( currentSize != newSize ) {
+    if( marqueeVars.screenSize == 'large' ) {
+      marqueeMultiPanel();
+    }
+  }
+
   if( marqueeVars.timePassed == marqueeVars.timeToChange ) {
     marqueeVars.timePassed = 0;
   } else {
