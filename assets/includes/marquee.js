@@ -49,6 +49,8 @@ function marqueeAdvance() {
   if( currentSize != newSize ) {
     if( marqueeVars.screenSize == 'large' ) {
       marqueeMultiPanel();
+    } else {
+      marqueeSinglePanel();
     }
   }
 
@@ -132,6 +134,16 @@ function marqueeMultiPanel() {
 
   $('.marquee_nav div:first').trigger('click');
 }
+
+
+function marqueeSinglePanel() {
+
+  $('.marquee').html('').append('<div class="marquee_stage_small">'+ marqueeVars.panelContent[0] +'</div>');
+  var panel_image_s = $('.marquee .marquee_stage_small .marquee_panel').attr('data-image-s');
+  $('.marquee .marquee_stage_small .marquee_panel').css('background-image', 'url('+ panel_image_s +')');
+
+}
+
 
 // Debugger
 var debugTimer = setInterval(setDebugger, 100)
