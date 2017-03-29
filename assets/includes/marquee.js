@@ -65,6 +65,10 @@ function marqueeMultiPanel() {
   marqueeVars.autoPlay = true;
   var newHTML = '<div class="marquee_stage_large"><div class="marquee_container_1"></div><div class="marquee_nav"></div><div class="btn prev"></div><div class="btn next"></div></div>';
   $('.marquee').html('').append(newHTML);
+
+  for( i=0; i<marqueeVars.totalPanels; i++ ) {
+    $('.marquee_nav').append('<div>x</div>');
+  }
 }
 
 // Debugger
