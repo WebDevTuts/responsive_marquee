@@ -69,6 +69,13 @@ function marqueeMultiPanel() {
   for( i=0; i<marqueeVars.totalPanels; i++ ) {
     $('.marquee_nav').append('<div>x</div>');
   }
+
+  $('.marquee').hover(function() {
+    marqueeVars.autoPlay = false;
+  }, function() {
+    marqueeVars.autoPlay = true;
+    marqueeVars.timePassed = Math.floor(marqueeVars.timeToChange / 2);
+  });
 }
 
 // Debugger
