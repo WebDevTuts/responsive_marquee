@@ -88,6 +88,26 @@ function marqueeMultiPanel() {
     marqueeVars.timePassed = Math.floor(marqueeVars.timeToChange / 2);
   });
 
+  $('.marquee .btn').on('click', function() {
+
+    if( !marqueeVars.inTransition ) {
+      if( $(this).hasClass('prev') ) {
+        marqueeVars.currentPanel -= 1;
+        if( marqueeVars.currentPanel < 1 ) {
+          marqueeVars.currentPanel = marqueeVars.totalPanels;
+        }
+      } else {
+        marqueeVars.currentPanel += 1;
+        if( marqueeVars.currentPanel > marqueeVars.totalPanels ) {
+          marqueeVars.currentPanel = 1;
+        }
+      }
+    }
+
+    $('.marquee_nav div:nth-child('+marqueeVars.currentPanel+')').trigger('click');
+
+  });
+
   $('.marquee_nav div').on('click', function() {
 
     if( !marqueeVars.inTransition ) {
