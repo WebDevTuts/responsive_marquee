@@ -14,6 +14,12 @@ var marqueeVars = {
 
 }
 
+$(document).ready(function() {
+
+  marqueeGatherData();
+
+});
+
 function marqueeGatherData() {
 
   $('.marquee_data .marquee_panel').each(function(index) {
