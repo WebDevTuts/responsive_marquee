@@ -29,7 +29,7 @@ function marqueeGatherData() {
     var panel_caption = $(this).html();
     marqueeVars.panelContent[index] = '<div class="marquee_panel" data-image-s="'+ panel_image_s +'" style="background-image:url('+ panel_image_l +');"><div class="overlay"></div><div class="panel_caption">'+ panel_caption +'</div></div>';
   });
-  marqueeAdvance();
+  var marqueeTimer = setInterval(marqueeAdvance, 100);
 
 }
 
@@ -45,6 +45,12 @@ function marqueeAdvance() {
   }
 
   marqueeVars.screenSize = newSize;
+
+  if( marqueeVars.timePassed == marqueeVars.timeToChange ) {
+    marqueeVars.timePassed = 0;
+  } else {
+    marqueeVars.timePassed += 1;
+  }
 
 }
 
